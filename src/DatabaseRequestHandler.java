@@ -15,9 +15,9 @@ public class DatabaseRequestHandler {
     private final String name;
     private final ExecutorService dbExecutor;
 
-    private static final String DB_URL = "postgresql://postgres:mdQkANEfquCNhYcQRbkpebqqbGLjnsCo@postgres.railway.internal:5432/railway";
+    private static final String DB_URL = "jdbc:postgresql://localhost:5432/user";
     private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "mdQkANEfquCNhYcQRbkpebqqbGLjnsCo";
+    private static final String DB_PASSWORD = "sadique362";
 
     private static final ConcurrentHashMap<String, String> queryCache = new ConcurrentHashMap<>();
 
