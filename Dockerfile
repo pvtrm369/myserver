@@ -1,17 +1,17 @@
 # Use an official Java runtime as a parent image
 FROM openjdk:17-jdk-slim
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy all project files
+# Copy everything from your project directory into the container
 COPY . .
 
-# Compile the Java files (Modify for Gradle/Maven)
+# Compile all Java files inside src/ folder
 RUN javac -d . src/*.java
 
-# Expose the application port
+# Expose port 8080 so Railway can access it
 EXPOSE 8080
 
-# Command to run the server
+# Start the server when the container runs
 CMD ["java", "WebServer"]
